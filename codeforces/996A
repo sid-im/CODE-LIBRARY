@@ -1,0 +1,57 @@
+#include<bits/stdc++.h>
+#define int long long int
+using namespace std;
+
+void solve(){
+int n;
+cin>>n;
+//1 5 10 20 100
+int c=0;
+while(n>0){
+
+    if(n-100>=0){
+        n=n-100;
+        c++;
+    }
+    else if(n-20>=0){
+        n=n-20;
+        c++;
+    }
+     else if(n-10>=0){
+        n=n-10;
+        c++;
+    }
+
+     else if(n-5>=0){
+        n=n-5;
+        c++;
+    }
+    else{
+        n=n-1;
+        c++;
+    }
+
+
+}
+
+cout<<c<<endl;
+}
+
+
+
+
+int32_t main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+int t=1;
+//cin>>t;
+while(t--)
+
+{
+
+
+    solve();
+}
+
+
+    return 0;
+}
