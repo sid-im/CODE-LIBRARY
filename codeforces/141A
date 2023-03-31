@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define mod 000000007
+
+
+int main(){
+
+string s1,s2;
+cin>>s1>>s2;
+
+string s=s1+s2;
+sort(s.begin(),s.end());
+string s3;
+cin>>s3;
+sort(s3.begin(),s3.end());
+if(s==s3)cout<<"YES"<<endl;
+else cout<<"NO"<<endl;
+return 0;}
