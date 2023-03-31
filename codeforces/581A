@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long int
+#define beg begin()
+#define en  end()
+
+void solve(){
+
+int a,b;
+cin>>a>>b;
+
+if((a-b)<0){
+
+    cout<<a<<" "<<(b-a)/2<<endl;
+
+}
+else{
+
+    cout<<b<<" "<<(a-b)/2<<endl;
+
+}
+}
+
+
+
+
+
+
+
+int32_t main(){
+int t=1;
+//cin>>t;
+while(t--){
+    solve();
+}
+
+
+
+
+return 0;}
