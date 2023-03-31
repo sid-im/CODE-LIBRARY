@@ -1,0 +1,60 @@
+#include <iostream>
+#include<climits>
+using namespace std;
+//topdown
+int minstep(int n,int dp[]){
+	    if(n==1)return 0;
+
+	    if(dp[n]!=0)return dp[n];
+
+
+	    int o1,o2,o3;
+	     o1=o2=o3=INT_MAX;
+	    if(n%2==0){
+	        o1=minstep(n/2,dp)+1;
+	    }
+	      if(n%3==0){
+	        o2=minstep(n/3,dp)+1;
+	    }
+	    o3 =minstep(n-1,dp)+1 ;
+
+	    int ans=min(min(o1,o2),o3);
+	    return dp[n]=ans;
+
+	}
+
+//bottom up
+
+int minBU(int n){
+int dp[1000];
+dp[1]=0;
+for(int i=2;i<=n;i++){
+    int o1,o2,o3;
+    o1=o2=o3=INT_MAX;
+    if(i%2==0){
+        o1=dp[i/2];
+    }
+       if(i%3==0){
+        o2=dp[i/3];
+    }
+    o3=dp[i-1];
+    dp[i]=min(o1,min(o2,o3))+1;
+
+}
+
+return dp[n];
+
+
+
+}
+
+
+
+
+int main() {
+int n;
+cin>>n;
+int dp[n+1]={0};
+int ans=minBU(n);
+cout<<ans<<endl;
+}
