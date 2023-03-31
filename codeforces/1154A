@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+#define int long long int
+using namespace std;
+
+void solve(){
+int a,b,c,d;
+cin>>a>>b>>c>>d;
+int ans=max(a,max(b,max(c,d)));
+//cout<<"ans "<<ans<<endl;
+
+    if(abs(ans-a)!=0){
+        cout<<abs(ans-a)<<endl;
+
+    }
+     if(abs(ans-b)!=0){
+        cout<<abs(ans-b)<<endl;
+} if(abs(ans-c)!=0){
+        cout<<abs(ans-c)<<endl;
+}
+    if(abs(ans-d)!=0){
+        cout<<abs(ans-d)<<endl;
+}
+
+
+
+
+}
+
+
+
+
+int32_t main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+int t=1;
+//cin>>t;
+while(t--)
+
+{
+
+
+    solve();
+}
+
+
+    return 0;
+}
