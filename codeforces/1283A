@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#define int long long int
+# define mod 100000007
+using namespace std;
+
+void solve(){
+float a,b;
+cin>>a>>b;
+
+b=b/60.00;
+a+=b;
+a=24-a;
+a*=60.00;
+int x=a;
+
+cout<<setprecision(4)<<a<<endl;
+}
+
+int32_t main() {
+
+	int t=1;cin>>t;
+
+	while(t--){
+
+            solve();
+	}
+	return 0;
+}
