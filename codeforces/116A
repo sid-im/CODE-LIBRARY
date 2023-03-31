@@ -1,0 +1,28 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+
+int main(){
+
+int n;
+cin>>n;
+
+
+int c=0,m=0;
+for(int i=1;i<=n;i++){
+int x,y;
+cin>>x>>y;
+c=c-x;
+c=c+y;
+m=max(c,m);
+}
+
+cout<<m<<endl;
+
+
+
+    return 0;
+}
