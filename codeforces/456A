@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+#define int long long int
+
+using namespace std;
+
+void solve(){
+int n;
+cin>>n;
+pair<int,int> a[n+1];
+
+
+
+  for(int i=0;i<n;i++){
+    int x,y;
+    cin>>x>>y;
+    a[i]=make_pair(x,y);
+  }
+  sort(a,a+n);
+ // sort(a.begin(),a.end());
+  bool f=0;
+  for(int i=0;i<n;i++){
+    if(a[i].first<a[i+1].first && a[i].second>a[i+1].second){
+f=1;
+    }
+
+    //cout<<a[i].first<<" "<<a[i].second<<endl;
+  }
+
+if(f==1)cout<<"Happy Alex"<<"\n"; else cout<<"Poor Alex"<<"\n"<<endl;
+}
+
+int32_t main() {
+	// your code goes here
+	int t=1;
+	//cin>>t;
+
+	while(t--){
+            solve();
+	}
+	return 0;
+}
