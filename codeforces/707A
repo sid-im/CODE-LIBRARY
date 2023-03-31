@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+map<char,int> mp;
+int n,m;
+cin>>n>>m;
+for(int i=0;i<n;i++){
+    for(int j=0;j<m;j++){
+        char x;
+        cin>>x;
+        mp[x]++;
+    }
+}
+int w=0,b=0,o=0,g=0;
+for(auto it:mp){
+
+      if(it.first=='B' || it.first=='W' || it.first=='G'){
+        if(it.first=='B')b=it.second;
+        if(it.first=='W')w=it.second;
+        if(it.first=='G')g=it.second;
+    }
+    else o=it.second;
+}
+if(o>0){
+   cout<<"#Color"<<endl;
+
+}
+else{
+
+       cout<<"#Black&White"<<endl;
+}
+}
+
+
+
+
+
+int32_t main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+
+    solve();
+
+
+
+    return 0;
+}
