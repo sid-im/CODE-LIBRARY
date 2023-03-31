@@ -1,0 +1,93 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include<climits>
+using namespace std;
+
+int mincoin(int n, int coins[],int T,int dp[]){
+if(n==0){
+    return 0;
+}
+
+
+if(dp[n]!=0){
+    return dp[n];
+}
+int ans=INT_MAX;
+
+for(int i=0;i<T;i++){
+    if((n-coins[i])>=0){
+   int subprob=mincoin(n-coins[i],coins,T,dp);
+
+    ans=min(ans,subprob+1);
+    }
+}
+dp[n]=ans;
+
+return dp[n];
+
+}
+
+//bottom up
+
+int bottomup(int N,int coins[],int t){
+
+int dp[100]={0};
+
+for(int n=1; n<=N;n++){
+
+    dp[n]=INT_MAX;
+
+    for(int i=0;i<t;i++){
+        if((n-coins[i])>=0)
+        {
+            int subprob=dp[n-coins[i]];
+            dp[n]=min(dp[n],subprob+1);
+        }
+    }
+
+
+}
+
+return dp[N];
+
+}
+
+
+int main() {
+int n=14;
+int coins[]={1,7,10};
+sort(coins,coins+3);
+int T=sizeof(coins)/sizeof(int);
+int dp[100]={0};
+
+cout<< bottomup(n,coins,T)<<endl;
+return  0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    vector<int>dp(amount+1, amount+1);
+        dp[0]=0;
+        for(int i=1; i<=amount; i++){
+            for(int j=0; j<coins.size(); j++){
+                if(coins[j]<=i){
+                    dp[i]=min(dp[i], dp[i-coins[j]]+1);
+                }
+            }
+        }
+        if(dp[amount]>amount){
+            return -1;
+        }
+        return dp[amount];
