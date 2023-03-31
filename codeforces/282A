@@ -1,0 +1,38 @@
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+
+{
+
+    int t;
+    cin>>t;
+    double ans=0.0;
+
+
+    while(t--){
+
+        string s;
+        cin>>s;
+
+        for(int i=0;i<s.length();i++){
+
+            if(s[i]=='+'){
+
+                ans=ans+0.5;
+
+            }
+            if(s[i]=='-'){
+            ans=ans-0.5;}
+
+            }
+        }
+
+
+
+
+    cout<<floor(ans)<<endl;
+
+    return 0;
+}
