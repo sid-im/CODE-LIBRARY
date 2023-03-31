@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+map<int,int> mp1;
+map<int,int> mp2;
+for(int i=0;i<3;i++){
+    int x,y;
+    cin>>x>>y;
+   mp1[x]++;
+   mp2[y]++;
+}
+int c1=0;
+for(auto it1:mp1){
+    if(it1.second>1){
+        c1++;
+    }
+}
+
+int c2=0;
+for(auto it2:mp2){
+    if(it2.second>1){
+        c2++;
+    }
+}
+// cout<<c1<< " "<<c2<<endl;
+if(c1>0 && c2>0){
+    cout<<"NO"<<endl;
+}
+else{
+    cout<<"YES"<<endl;
+}
+}
+
+
+
+
+
+int32_t main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+int t;
+cin>>t;
+while(t--){
+    solve();
+
+}
+
+    return 0;
+}
