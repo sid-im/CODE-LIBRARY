@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+#define int long long int
+using namespace std;
+
+void solve(){
+int c=0;
+
+string s;
+int n;
+cin>>s;
+
+if(s.length()%2==0){
+    for(int i=0;i<s.length()/2;i++){
+        if(s[i]==s[i+(s.length()/2)]){
+
+        }
+        else{
+            c=1;
+        }
+        }
+    }
+    else{
+        c=1;
+    }
+
+  if(c==1){cout<<"NO"<<endl;}
+  else cout<<"YES"<<endl;
+
+
+}
+
+
+
+
+int32_t main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+int t=1;
+cin>>t;
+while(t--)
+
+{
+
+
+    solve();
+}
+
+
+    return 0;
+}
