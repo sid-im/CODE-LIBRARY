@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long int
+#define beg begin()
+#define en  end()
+
+void solve(){
+
+string s;
+cin>>s;
+string newone,ha="hello";
+int c=0,a=0;
+    for(int i=0;i<s.length();i++){
+      if(s[i]==ha[a]){
+        c++;
+        a++;
+      }
+
+            }
+
+
+if(c==5)cout<<"YES"<<endl;
+else cout<< "NO"<<endl;
+}
+
+
+
+
+
+
+
+
+int32_t main(){
+int t=1;
+//cin>>t;
+while(t--){
+    solve();
+}
+
+
+
+
+return 0;}
