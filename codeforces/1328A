@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+#define int long long int
+using namespace std;
+
+int32_t main()
+{
+int t;
+cin>>t;
+while(t--){
+    int a,b;
+    cin>>a>>b;
+if(a%b==0)cout<<0<<endl;
+else{
+if(a>b){
+    int t=a/b;
+     t++;
+     int ans= b*t;
+     cout<<ans-a<<endl;
+}
+else{
+
+    cout<<b-a<<endl;
+
+
+
+
+}
+
+
+
+}
+
+}
+    return 0;
+}
