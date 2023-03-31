@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+int n;
+cin>>n;
+string res="";
+string s1="I hate that";
+string s2="I love that";
+for(int i=0;i<n;i++){
+        if(i%2==0){
+        res+=s1;
+        res+=" ";
+        }
+
+        else{
+
+res+=s2;
+res+=" ";
+        }
+
+}
+res.resize(res.length()-5);
+res+="it";
+cout<<res<<endl;
+
+}
+
+
+int main(){
+int t=1;
+//cin>>t;
+while(t--){
+
+solve();
+}
+return 0;}
