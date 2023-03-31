@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+#define fastIO ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define int long long int
+#define fi first
+#define se second
+#define rep(i, l, r) for(int i=(int)(l);i<(int)(r);i++)
+#define repd(i, l, r) for (int i=(int)(l);i>=(int)(r);i--)
+#define mod 1000000007
+#define sz size()
+
+using namespace std;
+
+
+void  solve(){
+int n,h;
+int c=0;
+cin>>n>>h;
+rep(i,0,n){
+    int x;
+    cin>>x;
+    if(x<=h){
+        c++;
+    }
+    else{
+        c+=2;
+    }
+}
+cout<<c<<endl;
+
+
+
+}
+
+int32_t main(){
+   fastIO
+
+ solve();
+
+
+return 0;
+}
