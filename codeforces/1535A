@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+#define int long long int
+using namespace std;
+
+
+
+
+
+
+int32_t main(){
+
+int t;
+cin>>t;
+while(t--){
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+ bool f=0;
+    int ans1=max(a,b);
+    int ans2=max(c,d);
+    int t1=min(a,b);
+    int t2=min(c,d);
+    if(ans1>t2 && ans2>t1)f=1;
+
+    if(f==1){cout<<"YES"<<endl;}
+    else{
+        cout<<"NO"<<endl;
+    }
+}
+
+return 0;}
