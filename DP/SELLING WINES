@@ -1,0 +1,30 @@
+https://leetcode.com/discuss/interview-question/1282577/selling-wine-dp-easy-c
+
+#include <iostream>
+#include <bits/stdc++.h>
+#include<climits>
+using namespace std;
+
+
+
+int topdown(int i,int j,int wines[],int y,int dp[][100]){
+
+if(i>j)return 0;
+ if(i==j) return wine[i]*y;
+if(dp[i][j]!=0){
+    return dp[i][j];
+}
+int op1=y*wines[i]+topdown(i+1,j,wines,y+1,dp);
+int op2=y*wines[j]+topdown(i,j-1,wines,y+1,dp);
+
+return dp[i][j]=max(op1,op2);
+
+}
+
+
+int main() {
+int wine[]={2,3,5,1,4};
+int dp[100][100]={0};
+cout<<topdown(0,4,wine,1,dp);
+return  0;
+}
