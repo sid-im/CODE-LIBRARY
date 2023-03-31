@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int nextPrime(int num) {
+        num++;
+        for (int i = 2; i <num; i++) {
+            if(num%i == 0) {
+                num++;
+                i=2;
+            } else{
+                continue;
+            }
+        }
+        return num;
+    }
+
+void solve(){
+int n,m;
+cin>>n>>m;
+int x=nextPrime(n);
+if(x==m)cout<<"YES"<<endl;
+else cout<<"NO"<<endl;
+}
+
+
+int32_t main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+int t=1;
+//cin>>t;
+while(t--)
+
+{
+
+
+    solve();
+}
+
+
+    return 0;
+}
