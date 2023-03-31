@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+#define int long long int
+using namespace std;
+
+
+
+
+
+
+int32_t main(){
+
+int n;
+cin>>n;
+while(n--){
+   int x;
+   cin>>x;
+   int ans=1;
+   int f=0;
+   for(int i=2; ;i=i*2){
+    ans=ans+i;
+    if(x%ans==0){
+        f=x/ans;
+        break;
+    }
+   }
+   cout<<f<<endl;
+}
+
+return 0;}
+ 
