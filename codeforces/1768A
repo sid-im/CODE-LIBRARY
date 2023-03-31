@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int t;
+    cin>>t;
+    if(t==0)cout<<1<<endl;
+    else{
+    cout<<t-1<<endl;
+    }
+}
+
+
+
+
+
+int32_t main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+int t;
+cin>>t;
+while(t--)
+
+{
+
+
+    solve();
+}
+
+
+    return 0;
+}
