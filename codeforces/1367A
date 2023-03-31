@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long int
+#define beg begin()
+#define en  end()
+
+void solve(){
+
+string s;
+cin>>s;
+
+if(s.length()<=2){
+    cout<<s<<endl;
+}
+else{
+    for(int i=0;i<s.length();i+=2){
+        cout<<s[i];
+    }
+    cout<<s[s.length()-1];
+    cout<<endl;
+
+}
+}
+
+
+
+
+
+
+
+int32_t main(){
+int t=1;
+cin>>t;
+while(t--){
+    solve();
+}
+
+
+
+
+return 0;}
