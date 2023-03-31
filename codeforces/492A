@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#define int long long int
+# define mod 100000007
+using namespace std;
+
+void solve(){
+int n;
+cin>>n;
+int x=1,c=0,ans=1;
+for(int i=2;ans<=n;i++){
+
+         c++;
+x+=i;
+ans+=x;
+
+
+}
+cout<<c<<endl;
+}
+
+int32_t main() {
+	// your code goes here
+	int t=1;	//cin>>t;
+
+	while(t--){
+            solve();
+	}
+	return 0;
+}
