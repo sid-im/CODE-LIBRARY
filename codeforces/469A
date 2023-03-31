@@ -1,0 +1,57 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+
+
+void solve(){
+    int he;
+    cin>>he;
+  int  n;
+  cin>>n;
+vector<int> a;
+
+for(int i=0;i<n;i++){
+    int x;
+    cin>>x;
+    a.push_back(x);
+}
+int m;
+cin>>m;
+
+for(int i=0;i<m;i++){
+    int x;
+    cin>>x;
+    a.push_back(x);
+}
+sort(a.begin(),a.end());
+vector<int> ha;
+for(int i=0;i<n+n-1;i++){
+    if(a[i]==a[i+1]){
+
+    }
+    else{
+        ha.push_back(a[i]);
+    }
+}
+if(ha.size()==he){
+    cout<<"I become the guy."<<endl;
+}
+else{
+    cout<<"Oh, my keyboard!"<<endl;
+}
+}
+
+
+
+
+
+int32_t main() {
+ios_base::sync_with_stdio(false); cin.tie(0);
+int t=1;
+//cin>>t;
+while(t--){
+   solve();
+}
+return 0;
+}
